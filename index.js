@@ -31,19 +31,10 @@ console.log(result6);
 const routine = [wakeDog,leashDog,walkToPark,throwFrisbee,walkHome,unleashDog];
 
 
-const weatherToday = "Rainy";
-
-function exerciseDog(dogName, dogBreed) {
-    return routine;
-  }
-  console.log(`Wake ${dogName} the ${dogBreed}`);
-  console.log(`Leash ${dogName} the ${dogBreed}`);
-  console.log(`Walk to the park ${dogName} the ${dogBreed}`);
-  console.log(`Throw the frisbee for ${dogName} the ${dogBreed}`);
-  console.log(`Walk home with ${dogName} the ${dogBreed}`);
-  console.log(`Unleash ${dogName} the ${dogBreed}`);
-  return routine
-}
-
-const result = exerciseDog("Byron", "poodle");
-console.log(result); // => "Byron did not exercise d
+function exerciseDog (dogName, dogBreed){
+         const finalArray = [];
+         for(let i = 0; i < routine.length; i++){
+                 finalArray.push(routine[i](dogName, dogBreed));
+         }
+         return finalArray;
+ }
